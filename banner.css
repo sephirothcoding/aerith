@@ -28,7 +28,7 @@ a
     height:400px;
     margin: 0 auto;
     margin-top:100px;
-    background-color: white;
+    background-color: light-blue;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -76,7 +76,7 @@ a
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    background-color: white;
+    background-color: light-blue;
     margin: 0 auto;
     background-image: url("https://img.xatblog.net/image/ygoecZ36Cto.png");
     background-size: cover;
