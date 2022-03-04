@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+
+
+$color-overlay:         rgba(0, 0, 0, .1);
+$color-overlay-hover:   rgba(0, 0, 0, .3);
+$color-shadow:          rgba(0, 0, 0, .4);
+
+$transition-speed:  .2s;
+$fg-offset:         64px;
+
+$strip-offset:          64px;
+$strip-offset-hover:    20px;
+
+$strip-color-default:   #ddd;
+$strip-color-tone1:     rgba(255, 75, 115, 1);
+$strip-color-tone2:     rgba(2, 44, 168, 1);
+$strip-color-tone3:     rgba(144, 2, 168, 1);
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cookie', cursive;
+    font-size: 16px;
+}
+
+.card {
+    position: relative;
+    width: 50%;
+    max-width: 1024px;
+    height: 300px;
+    min-height: calc(0px + #{$fg-offset} * 2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    border: 1px solid #fff;
+    
+    &__background {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    &__foreground {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        padding: $fg-offset;
+        background-color: $color-overlay;
+        transition: background-color $transition-speed ease;
+        
+        &:hover {
+            background-color: $color-overlay-hover;
+        }
+    }
+    
+    &__strip {
+        position: relative;
+        padding: 10px 16px 2px;
+        width: 50%;
+        font-size: 3rem;
+        line-height: 1;
+        color: #333;
+        transition: width $transition-speed ease;
+        cursor: pointer;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background-color: $strip-color-default;
+            box-shadow: inset -16px 0 10px -10px $color-shadow;
+            opacity: .8;
+            transition: opacity $transition-speed ease;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(100% + #{$fg-offset});
+            width: $strip-offset;
+            opacity: .8;
+            box-shadow: inset 14px 0 10px -10px $color-shadow;
+            transition: all $transition-speed ease;
+            pointer-events: none;
+        }
+        
+        .strip__text {
+            position: relative;
+            z-index: 2;
+            opacity: .8;
+            transition: opacity $transition-speed ease .3s;
+        }
+        
+        &--tone1 {
+            color: #fff;
+            
+            &:before,
+            &:after {
+                background-color: $strip-color-tone1;
+            }
+        }
+        
+        &--tone2 {
+            color: #fff;
+            
+            &:before,
+            &:after {
+                background-color: $strip-color-tone2;
+            }
+        }
+        
+        &--tone3 {
+            color: #fff;
+            
+            &:before,
+            &:after {
+                background-color: $strip-color-tone3;
+            }
+        }
+        
+        &--active {
+            width: calc(50% + #{$strip-offset} - #{$strip-offset-hover});
+        
+            .strip__text {
+                opacity: 1;
+                transition: opacity $transition-speed ease;
+            }
+        
+            &:before {
+                opacity: 1;
+            }
+            
+            &:after {
+                width: $strip-offset-hover;
+                opacity: 1;
+            }
+        }
+    }
+}
