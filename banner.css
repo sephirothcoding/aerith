@@ -1,8 +1,9 @@
 body {
   
-  background-image: url('https://img.xatblog.net/image/3v6WqGdDZTt.jpg')
-  font: 14px/1.6em sans-serif;
+  background-image: url('https://img.xatblog.net/image/3v6WqGdDZTt.jpg');
   background-size: cover;
+  font: 14px/1.6em sans-serif;
+  
 }
 
 .ribbon {
