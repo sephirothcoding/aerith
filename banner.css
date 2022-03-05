@@ -1,5 +1,8 @@
 body {
   background: #ddd;
+  background-image: url('https://img.xatblog.net/image/3v6WqGdDZTt.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font: 14px/1.6em sans-serif;
 }
 
