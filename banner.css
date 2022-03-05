@@ -138,7 +138,7 @@ button.contact
     border:none;
     background-color: transparent;
     font-family: inherit;
-    color: white;
+    color: red;
     background-color: #C7D0E1;
     font-size:12px;
     text-transform: uppercase;
@@ -260,7 +260,7 @@ button.contact:focus
 {
     width: 200px;
     text-transform: capitalize;
-    background-color: white;
+    background-color: red;
     margin: 0 auto;
     display: block;
     margin-top:40px;
