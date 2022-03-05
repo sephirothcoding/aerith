@@ -1,7 +1,7 @@
 body {
   
   background-image: url('https://img.xatblog.net/image/3v6WqGdDZTt.jpg');
-  background-size: cover;
+  background-size: contain;
   font: 14px/1.6em sans-serif;
   
 }
