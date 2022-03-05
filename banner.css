@@ -1,9 +1,11 @@
 body {
-  background: #ddd;
-  background-image: url('https://img.xatblog.net/image/3v6WqGdDZTt.jpg');
-  background-repeat: no-repeat;
-  background-size: fill;
+  
+  background-image: url('https://img.xatblog.net/image/3v6WqGdDZTt.jpg')
   font: 14px/1.6em sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .ribbon {
